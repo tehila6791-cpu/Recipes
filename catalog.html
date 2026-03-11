@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>קטלוג מתכונים</title>
+    <link rel="icon" type="image/png" href="לוגו.png">
+    <link rel="stylesheet" href="catalog.css">
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <img src="לוגו.png" alt="לוגו" class="logo-image" referrerpolicy="no-referrer">
+        </div>
+        <div class="header-center">
+            <img src="המתכונים שלי.png" alt="המתכונים שלי" class="center-image" referrerpolicy="no-referrer">
+        </div>
+        <button class="settings-icon" onclick="location.href='./settings.html'" title="הגדרות">⚙️</button>
+    </div>
+
+    <div class="categories">
+        <div class="search-container">
+            <span class="search-icon">🔍</span>
+            <input type="text" id="searchInput" placeholder="חפש מתכון..." oninput="searchRecipes()">
+        </div>
+        <button class="category-btn active" onclick="filterCategory('all')">הכל</button>
+        <button class="category-btn" onclick="filterCategory('breakfast')">ארוחת בוקר</button>
+        <button class="category-btn" onclick="filterCategory('lunch')">ארוחת צהריים</button>
+        <button class="category-btn" onclick="filterCategory('dinner')">ארוחת ערב</button>
+        <button class="category-btn" onclick="filterCategory('dessert')">קינוחים</button>
+        <button class="category-btn" onclick="filterCategory('salad')">סלטים</button>
+        <button class="add-recipe-btn" onclick="window.location.href='add-recipe.html'">+ הוסף מתכון</button>
+    </div>
+
+    <div class="recipes-grid" id="recipesGrid"></div>
+
+    <script src="catalog.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>אתר מתכונים - התחברות</title>
+    <link rel="icon" type="image/png" href="לוגו.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h1>אתר המתכונים שלי</h1>
+            
+            <div id="loginForm" class="form active">
+                <h2>התחברות</h2>
+                <input type="email" id="loginEmail" placeholder="אימייל" required>
+                <input type="password" id="loginPassword" placeholder="סיסמה" required>
+                <button onclick="login()">התחבר</button>
+                <p class="toggle-text">משתמש חדש? <span onclick="toggleForm()">הירשם כאן</span></p>
+            </div>
+
+            <div id="registerForm" class="form">
+                <h2>הרשמה</h2>
+                <input type="text" id="registerName" placeholder="שם מלא" required>
+                <input type="email" id="registerEmail" placeholder="אימייל" required>
+                <input type="password" id="registerPassword" placeholder="סיסמה" required>
+                <button onclick="register()">הירשם</button>
+                <p class="toggle-text">כבר רשום? <span onclick="toggleForm()">התחבר כאן</span></p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

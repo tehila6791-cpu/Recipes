@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>מתכון</title>
+    <link rel="icon" type="image/png" href="לוגו.png">
+    <link rel="stylesheet" href="recipe.css">
+</head>
+<body>
+    <div class="container">
+        <button class="back-btn" onclick="window.location.href='catalog.html'">← חזרה לקטלוג</button>
+        
+        <div class="recipe-header">
+            <img id="recipeImage" class="recipe-main-image" alt="" referrerpolicy="no-referrer">
+            <div class="recipe-title-section">
+                <h1 id="recipeName"></h1>
+                <div class="recipe-meta">
+                    <div class="meta-item">
+                        <span>👨‍🍳</span>
+                        <span>מתכון מעולה</span>
+                    </div>
+                    <div class="meta-item">
+                        <span>⭐</span>
+                        <span>מומלץ בחום</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="audio-controls">
+            <button id="playBtn" onclick="toggleAudio()">▶ השמע מתכון</button>
+        </div>
+
+        <div class="recipe-content">
+            <div class="section">
+                <h2>חומרים:</h2>
+                <ul id="ingredients"></ul>
+            </div>
+
+            <div class="section">
+                <h2>אופן ההכנה:</h2>
+                <ol id="instructions"></ol>
+            </div>
+        </div>
+    </div>
+
+    <script src="recipe.js"></script>
+</body>
+</html>

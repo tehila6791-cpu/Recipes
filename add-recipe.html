@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>הוספת מתכון</title>
+    <link rel="icon" type="image/png" href="לוגו.png">
+    <link rel="stylesheet" href="add-recipe.css">
+</head>
+<body>
+    <div class="container">
+        <button class="back-btn" onclick="window.location.href='catalog.html'">← חזרה לקטלוג</button>
+        
+        <h1>הוסף מתכון חדש</h1>
+
+        <form id="addRecipeForm" onsubmit="addRecipe(event)">
+            <div class="form-group">
+                <label>שם המתכון:</label>
+                <input type="text" id="recipeName" required>
+            </div>
+
+            <div class="form-group">
+                <label>קטגוריה:</label>
+                <select id="recipeCategory" required>
+                    <option value="breakfast">ארוחת בוקר</option>
+                    <option value="lunch">ארוחת צהריים</option>
+                    <option value="dinner">ארוחת ערב</option>
+                    <option value="dessert">קינוחים</option>
+                    <option value="salad">סלטים</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>תמונה (URL):</label>
+                <input type="url" id="recipeImage" placeholder="https://example.com/image.jpg" required>
+            </div>
+
+            <div class="form-group">
+                <label>חומרים (אחד בכל שורה):</label>
+                <textarea id="recipeIngredients" rows="6" placeholder="4 ביצים&#10;2 עגבניות&#10;בצל אחד" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>אופן ההכנה (שלב אחד בכל שורה):</label>
+                <textarea id="recipeInstructions" rows="8" placeholder="חותכים את הבצל&#10;מחממים שמן בסיר&#10;מטגנים את הבצל" required></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">💾 שמור מתכון</button>
+        </form>
+    </div>
+
+    <script src="add-recipe.js"></script>
+</body>
+</html>

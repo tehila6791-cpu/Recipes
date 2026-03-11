@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>הגדרות</title>
+    <link rel="icon" type="image/png" href="לוגו.png">
+    <link rel="stylesheet" href="settings.css">
+</head>
+<body>
+    <div class="container">
+        <button class="back-btn" onclick="window.location.href='catalog.html'">← חזרה לקטלוג</button>
+        
+        <h1>⚙️ הגדרות</h1>
+
+        <div class="settings-section">
+            <h2>הגדרות השמעה</h2>
+            <div class="setting-item">
+                <label>זמן המתנה בין שורות (שניות):</label>
+                <input type="range" id="pauseDelay" min="0" max="3" step="0.5" value="0.5">
+                <span id="delayValue">0.5</span>
+            </div>
+        </div>
+
+        <div class="settings-section">
+            <h2>הגדרות תצוגה</h2>
+            <div class="setting-item">
+                <label>מצב תצוגה:</label>
+                <div class="toggle-group">
+                    <button class="toggle-btn active" onclick="setTheme('light')">☀️ בהיר</button>
+                    <button class="toggle-btn" onclick="setTheme('dark')">🌙 כהה</button>
+                </div>
+            </div>
+            
+            <div class="setting-item">
+                <label>גודל גופן:</label>
+                <select id="fontSize">
+                    <option value="small">קטן</option>
+                    <option value="medium" selected>בינוני</option>
+                    <option value="large">גדול</option>
+                </select>
+            </div>
+
+            <div class="setting-item">
+                <label>מספר מתכונים בשורה:</label>
+                <select id="gridColumns">
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4" selected>4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+        </div>
+
+        <button class="save-btn" onclick="saveSettings()">💾 שמור הגדרות</button>
+    </div>
+
+    <script src="settings.js"></script>
+</body>
+</html>
